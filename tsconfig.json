@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "declaration": true,
+    "outDir": "build",
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["dom", "es5"],
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*", "diagraph.d.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

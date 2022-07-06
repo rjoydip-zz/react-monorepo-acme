@@ -1,0 +1,64 @@
+{
+  "name": "diagraph",
+  "version": "0.0.1",
+  "description": "Create beautiful system diagrams with JS",
+  "type": "module",
+  "source": "src/diagraph.ts",
+  "types": "./build/diagraph.d.ts",
+  "exports": {
+    "require": "./build/diagraph.cjs",
+    "default": "./build/diagraph.global.js"
+  },
+  "main": "./build/diagraph.cjs",
+  "module": "./build/diagraph.global.js",
+  "unpkg": "./build/diagraph.js",
+  "engines": {
+    "node": ">=14 <=16"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "start": "tsup --watch",
+    "typecheck": "tsc -b",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "clean": "rimraf build/ coverage/",
+    "lint": "eslint src/**/* --ext .ts --max-warnings 0 --fix",
+    "format": "prettier --write \"**/*.{md,json,ts}\"",
+    "all": "run-s clean typecheck lint format test build",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjoydip/diagraph.git"
+  },
+  "keywords": [],
+  "author": "rjoydip",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rjoydip/diagraph/issues"
+  },
+  "homepage": "https://github.com/rjoydip/diagraph#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "@vitest/ui": "^0.17.0",
+    "c8": "^7.11.3",
+    "eslint": "^8.19.0",
+    "eslint-plugin-unicorn": "^43.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "tsup": "^6.1.3",
+    "typescript": "^4.7.4",
+    "vitest": "^0.17.0"
+  },
+  "lint-staged": {
+    "**/*.{md,json,ts}": "prettier --write"
+  }
+}
