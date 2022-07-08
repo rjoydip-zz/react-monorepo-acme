@@ -27,7 +27,7 @@
     "lint": "eslint src/**/* --ext .ts --max-warnings 0 --fix",
     "format": "prettier --write \"**/*.{md,json,ts}\"",
     "all": "run-s clean typecheck lint format test build",
-    "prepare": "husky install"
+    "prepare": "husky install && chmod ug+x .husky/*"
   },
   "repository": {
     "type": "git",
