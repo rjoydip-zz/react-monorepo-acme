@@ -1,15 +1,18 @@
 {
+  "include": ["src/**/*.tsx", "diagraph.d.ts"],
+  "exclude": ["node_modules/**/*"],
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "es2021",
+    "outDir": "./build",
+    "jsx": "react",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "moduleResolution": "Node",
+    "lib": ["DOM"],
+    "noEmitOnError": false,
     "declaration": true,
-    "outDir": "build",
-    "strict": true,
-    "skipLibCheck": true,
-    "lib": ["dom", "es5"],
-    "paths": {
-      "~/*": ["./src/*"]
-    }
-  },
-  "include": ["src/**/*", "diagraph.d.ts"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+    "declarationMap": false,
+    "isolatedModules": true,
+    "strict": true
+  }
 }

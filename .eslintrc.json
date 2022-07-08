@@ -1,20 +1,28 @@
 {
   "env": {
     "browser": true,
-    "node": true,
-    "es2021": true
+    "es6": true,
+    "jest": false
   },
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:preact/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {},
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "unicorn"],
+  "plugins": ["@typescript-eslint"],
   "settings": {
     "react": {
-      "version": "detect"
+      "version": "detect",
+      "createClass": "createElement",
+      "pragma": "h"
     }
   },
   "rules": {
@@ -34,14 +42,6 @@
       "expression",
       {
         "allowArrowFunctions": true
-      }
-    ],
-    "unicorn/filename-case": [
-      "error",
-      {
-        "case": "kebabCase",
-        // Remix routes need to contain $variable in the file name
-        "ignore": ["\\$"]
       }
     ]
   }

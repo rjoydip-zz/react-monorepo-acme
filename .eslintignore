@@ -1,0 +1,5 @@
+.vscode/*
+build/*
+build/*
+node_modules/*
+**/index.html
