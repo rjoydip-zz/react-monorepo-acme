@@ -53,6 +53,6 @@
     "vitest": "^0.17.0"
   },
   "lint-staged": {
-    "!{coverage,build,.cache}/**/*.{md,json,ts,tsx}": "prettier --write"
+    "**/*.{md,json,ts,tsx}": "prettier --write"
   }
 }
