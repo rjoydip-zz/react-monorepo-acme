@@ -1,5 +1,7 @@
-.vscode/*
-build/*
-build/*
-node_modules/*
-**/index.html
+dist
+node_modules
+*.snap
+*.d.ts
+coverage
+docs
+.eslintrc.js

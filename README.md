@@ -1,3 +1,3 @@
-# diagraph
+# react-svgjs
 
-Create beautiful system diagrams with JS
+React SVG.js

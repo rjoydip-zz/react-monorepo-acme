@@ -1,0 +1,31 @@
+{
+  "name": "@react-svgjs/ui",
+  "version": "1.0.0",
+  "description": "React SVGjs UI component",
+  "sideEffects": false,
+  "type": "module",
+  "source": "src/index.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./ui.d.ts",
+  "scripts": {
+    "build": "rimraf dist && microbundle",
+    "dev": "microbundle watch",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [],
+  "author": "rjoydip",
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "^0.15.0",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.1.2",
+    "preact": "^10.9.0"
+  }
+}

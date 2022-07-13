@@ -106,3 +106,10 @@ build
 
 # TernJS port file
 .tern-port
+
+.vscode/*
+.snapshots/*
+dist/*
+example/*
+*.min.js
+**/index.html
