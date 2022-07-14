@@ -2,4 +2,6 @@
 import { createContext } from 'preact'
 import { SVG } from '@svgdotjs/svg.js'
 
-export const SVGContext = createContext(SVG())
+const SVGContext = createContext(SVG())
+
+export default SVGContext
