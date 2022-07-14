@@ -4,4 +4,5 @@ node_modules
 *.d.ts
 coverage
 docs
-.eslintrc.js
+*.eslintrc.js
+*commitlint.config.js

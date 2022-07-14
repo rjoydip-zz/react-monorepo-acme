@@ -17,10 +17,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
     "paths": {
-      "@react-svgjs/ui": ["./packages/ui/index.ts"]
-      // "~/*": ["./packages/ui/*"]
+      "@acme/ui": ["./packages/ui/index.ts"]
     }
   },
-  "exclude": ["dist/*", "example/*", "packages/**/dist/*"]
+  "exclude": ["dist/*", "example/*", "node_modules/*", "*.d.ts"]
 }

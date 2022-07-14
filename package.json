@@ -1,52 +1,56 @@
 {
-  "name": "@react-svgjs/monorepo",
+  "name": "react-monorepo-acme",
   "version": "0.0.1",
-  "description": "React SVG.js",
+  "description": "Welcome to Acme React Library. A monorepo libary starter.",
   "private": true,
   "engines": {
     "node": ">=14 <=16"
   },
+  "main": "./packages/index.ts",
   "sideEffects": false,
   "packageManager": "pnpm@7.3.0",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "scripts": {
     "prepare": "husky install && chmod ug+x .husky/*",
-    "typecheck": "tsc -p ./tsconfig.base.json --noEmit",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint packages/**/*.{ts,tsx} --max-warnings 0",
     "lint:fix": "eslint packages/**/*.{ts,tsx} --max-warnings 0 --fix",
-    "format": "prettier --write '!{coverage,example,build,.cache}/**/*' '**/*.{md,json,ts,tsx}'",
-    "build": "run-p clean typecheck format lint:fix",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:ui": "vitest --ui",
-    "coverage": "vitest run --coverage",
-    "clean": "rimraf dist/ build/ coverage/ .parcel-*/ cache/ .pnpm-* *-debug.log *.lock *-lock.*",
-    "predeploy": "cd example && pnpm install && pnpm build",
-    "deploy": "gh-pages -d example/build"
+    "format": "prettier --write '!{coverage,example,dist,build,.cache}/**/*' '**/*.{md,json,ts,tsx}'",
+    "clean": "rimraf dist build coverage .parcel-* cache .pnpm-* *-debug.log *.lock *-lock.*",
+    "build:example": "cd example && pnpm install && pnpm build",
+    "dev:example": "cd example && pnpm install && pnpm dev",
+    "preview:example": "cd example && pnpm install && pnpm preview",
+    "predeploy": "pnpm build:example",
+    "deploy": "gh-pages -d example/build",
+    "all": "run-s clean typecheck format lint:fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rjoydip/react-svgjs.git"
+    "url": "git+https://github.com/rjoydip/react-monorepo-acme.git"
   },
   "keywords": [],
   "author": "rjoydip",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rjoydip/react-svgjs/issues"
+    "url": "https://github.com/rjoydip/react-monorepo-acme/issues"
   },
-  "homepage": "https://github.com/rjoydip/react-svgjs#readme",
+  "homepage": "https://github.com/rjoydip/react-monorepo-acme#readme",
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@preact/preset-vite": "^2.3.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
+    "@vitejs/plugin-react": "^2.0.0",
     "@vitest/ui": "^0.17.0",
     "c8": "^7.11.3",
     "eslint": "^8.19.0",
     "eslint-config-standard": "^17.0.0",
-    "eslint-config-standard-preact": "^1.1.6",
     "eslint-plugin-prettier": "^4.2.1",
     "gh-pages": "^4.0.0",
     "husky": "^8.0.1",
@@ -64,8 +68,5 @@
   },
   "pnpm": {
     "overrides": {}
-  },
-  "dependencies": {
-    "preact": "^10.9.0"
   }
 }

@@ -6,7 +6,6 @@ module.exports = {
   },
   extends: [
     "standard", 
-    "standard-preact",
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended'
   ],
@@ -17,9 +16,9 @@ module.exports = {
       jsx: true
     },
     ecmaVersion: 'latest',
-    project: ['./tsconfig.base.json', './packages/*/tsconfig.json']
+    project: ['./tsconfig.json', './packages/*/tsconfig.json']
   },
-  plugins: ['prettier', '@typescript-eslint'],
+  plugins: ['@typescript-eslint'],
   settings: {
     react: {
       version: 'detect',
