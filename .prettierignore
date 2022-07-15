@@ -1,0 +1,8 @@
+coverage/*
+example/*
+**/dist/*
+build/*
+.cache/*
+LICENSE.md
+pnpm-lock.yaml
+pnpm-workspace.yaml
