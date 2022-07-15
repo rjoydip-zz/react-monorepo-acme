@@ -5,7 +5,7 @@ module.exports = {
     es6: true
   },
   extends: [
-    "standard", 
+    'standard',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended'
   ],
@@ -30,4 +30,4 @@ module.exports = {
     'no-console': 2,
     'no-unused-vars': 'off'
   }
-};
+}

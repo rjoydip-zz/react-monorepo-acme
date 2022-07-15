@@ -19,7 +19,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint packages/**/*.{ts,tsx} --max-warnings 0",
     "lint:fix": "eslint packages/**/*.{ts,tsx} --max-warnings 0 --fix",
-    "format": "prettier --write '!{coverage,example,dist,build,.cache}/**/*' '**/*.{md,json,ts,tsx}'",
+    "format": "prettier --write --cache .",
     "clean": "rimraf dist build coverage .parcel-* cache .pnpm-* *-debug.log *.lock *-lock.*",
     "build:example": "cd example && pnpm install && pnpm build",
     "dev:example": "cd example && pnpm install && pnpm dev",
