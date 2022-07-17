@@ -20,7 +20,7 @@
     "lint": "eslint packages/**/*.{ts,tsx} --max-warnings 0",
     "lint:fix": "eslint packages/**/*.{ts,tsx} --max-warnings 0 --fix",
     "format": "prettier --write --cache .",
-    "clean": "rimraf dist build coverage .parcel-* cache .pnpm-* *-debug.log *.lock *-lock.*",
+    "clean": "rimraf dist build coverage cache .parcel-* *-debug.log",
     "e2e:app": "cd packages/app && pnpm e2e:test",
     "predeploy": "cd packages/app && npm build",
     "deploy": "gh-pages -d packages/app/dist",
