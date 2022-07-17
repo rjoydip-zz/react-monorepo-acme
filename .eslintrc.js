@@ -4,11 +4,7 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: [
-    'standard',
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended'
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     tsconfigRootDir: __dirname,
@@ -28,6 +24,8 @@ module.exports = {
   },
   rules: {
     'no-console': 2,
-    'no-unused-vars': 'off'
+    'no-unused-vars': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off'
   }
 }

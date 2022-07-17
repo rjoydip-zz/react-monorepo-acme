@@ -4,27 +4,13 @@
   "description": "Acme UI component",
   "sideEffects": false,
   "type": "module",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/ui.umd.js",
-  "module": "./dist/ui.es.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/ui.es.js",
-      "require": "./dist/ui.umd.js"
-    }
-  },
+  "main": "src/index.ts",
+  "types": "index.d.ts",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
-    "coverage": "vitest run --coverage",
-    "prepublishOnly": "pnpm build"
+    "coverage": "vitest run --coverage"
   },
   "keywords": [
     "UI"
@@ -36,12 +22,12 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@testing-library/react": "^13.3.0",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
     "typescript": "^4.7.4",
     "vite": "^3.0.0",
-    "vite-plugin-dts": "^1.3.0",
     "vitest": "^0.18.0"
   }
 }

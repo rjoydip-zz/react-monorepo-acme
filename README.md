@@ -1,5 +1,7 @@
 # react-monorepo-acme
 
+[![CI](https://github.com/rjoydip/react-monorepo-acme/actions/workflows/ci.yml/badge.svg?branch=main&event=push)](https://github.com/rjoydip/react-monorepo-acme/actions/workflows/ci.yml)
+
 Welcome to Acme React Library. A monorepo libary starter.
 
 ## Features
@@ -14,8 +16,9 @@ Welcome to Acme React Library. A monorepo libary starter.
 - [Vitest](https://vitest.dev/) - Blazing Fast Unit Test Framework.
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) - React Testing Library builds on top of DOM Testing Library by adding APIs for working with React components.
 - [Monorepo](https://monorepo.tools/)
-- [Commitlint](https://commitlint.js.org/) - Lint commit messages
-- [PNpm](https://pnpm.io/) - Fast, disk space efficient package manager
+- [Commitlint](https://commitlint.js.org/) - Lint commit messages.
+- [PNpm](https://pnpm.io/) - Fast, disk space efficient package manager.
+- [Cypress](https://www.cypress.io/) - Fast, easy and reliable testing for anything that runs in a browser.
 
 ## Contribution
 

@@ -4,13 +4,12 @@
 ARG VARIANT="16"
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
 
-# [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+# Cypress Dependencies - https://docs.cypress.io/guides/continuous-integration/introduction#Dependencies
+RUN apt-get update \ 
+    && apt-get install -y dbus libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 
-# [Optional] Uncomment if you want to install an additional version of node using nvm
-# ARG EXTRA_NODE_VERSION=10
-# RUN su node -c "source /usr/local/share/nvm/nvm.sh && nvm install ${EXTRA_NODE_VERSION}"
+RUN mkdir -p /var/run/dbus
+RUN dbus-daemon --config-file=/usr/share/dbus-1/system.conf --print-address
 
 # [Optional] Uncomment if you want to install more global node modules
 RUN su node -c "npm install -g pnpm"
