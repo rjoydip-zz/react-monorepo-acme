@@ -6,7 +6,7 @@ on:
       - "renovate/**"
 
 jobs:
-  test:
+  prepare:
     if: "!contains(github.event.head_commit.message, 'ci skip')"
 
     strategy:
@@ -48,7 +48,7 @@ jobs:
   ui-chrome-tests:
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
-    needs: install
+    needs: prepare
     strategy:
       fail-fast: false
       matrix:
@@ -63,29 +63,28 @@ jobs:
         with:
           name: build
           path: build
-      
+
       - name: Install pnpm
         run: npm i -g pnpm
 
       - name: Install deps
         run: pnpm i
 
-      - name: 'UI Tests - Chrome'
+      - name: "UI Tests - Chrome"
         uses: cypress-io/github-action@v4
         with:
           # we have already installed all dependencies above
           install: false
           start: pnpm e2e:app
-          wait-on: 'http://127.0.0.1:5173/'
+          wait-on: "http://127.0.0.1:5173/"
           wait-on-timeout: 120
           browser: chrome
           record: false
           parallel: true
-          group: 'UI - Chrome'
+          group: "UI - Chrome"
           spec: packages/app/cypress/e2e/*.cy.ts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 # release:
 #   runs-on: ubuntu-latest
 #   needs: ['test']
