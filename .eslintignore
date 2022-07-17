@@ -4,5 +4,7 @@ node_modules
 *.d.ts
 coverage
 docs
+example
+packages/**/cypress
 *.eslintrc.js
 *commitlint.config.js

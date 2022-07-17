@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const Greet = () => {
-  return <div>Greet</div>
+  return <div aria-label="greet">Greeting from @acme/ui Greet component</div>
 }

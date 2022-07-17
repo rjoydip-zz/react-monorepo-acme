@@ -28,6 +28,8 @@ module.exports = {
   },
   rules: {
     'no-console': 2,
-    'no-unused-vars': 'off'
+    'no-unused-vars': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off'
   }
 }

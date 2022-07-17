@@ -1,3 +1,6 @@
+/// <reference type="vite">
+/// <reference type="vite/client">
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 

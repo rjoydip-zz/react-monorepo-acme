@@ -4,7 +4,7 @@
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "moduleResolution": "node",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "noEmit": false,
     "sourceMap": true,
     "declaration": true,
@@ -22,5 +22,11 @@
       "@acme/ui": ["./packages/ui/index.ts"]
     }
   },
-  "exclude": ["dist/*", "example/*", "node_modules/*", "*.d.ts"]
+  "exclude": [
+    "dist/*",
+    "example/*",
+    "node_modules/*",
+    "*.d.ts",
+    "packages/**/cypress"
+  ]
 }

@@ -6,17 +6,23 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "e2e:test": "start-server-and-test dev http://127.0.0.1:5173 cy:run"
   },
   "dependencies": {
+    "@acme/ui": "link:../ui",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@acme/ui": "link:../packages/ui"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
+    "cypress": "^10.3.0",
+    "react-router-dom": "^6.3.0",
+    "start-server-and-test": "^1.14.0",
     "typescript": "^4.6.4",
     "vite": "^3.0.0"
   }
