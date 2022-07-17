@@ -11,6 +11,7 @@ importers:
       cypress: ^10.3.0
       eslint: ^8.19.0
       eslint-config-standard: ^17.0.0
+      eslint-plugin-import: ^2.26.0
       eslint-plugin-prettier: ^4.2.1
       gh-pages: ^4.0.0
       husky: ^8.0.1
@@ -27,6 +28,7 @@ importers:
       cypress: 10.3.0
       eslint: 8.20.0
       eslint-config-standard: 17.0.0_aabay5xq26dqolh67bnodxi5n4
+      eslint-plugin-import: 2.26.0_y5cwkwncsnk6w3wfynadgn7abe
       eslint-plugin-prettier: 4.2.1_vvfpqh5kol6rhqy7beehv5uezq
       gh-pages: 4.0.0
       husky: 8.0.1
