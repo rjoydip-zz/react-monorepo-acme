@@ -24,7 +24,7 @@
     "e2e:app": "cd packages/app && pnpm e2e:test",
     "predeploy": "cd packages/app && npm build",
     "deploy": "gh-pages -d packages/app/dist",
-    "all": "run-s clean typecheck format lint:fix e2e:app"
+    "all": "run-s clean typecheck format lint:fix"
   },
   "repository": {
     "type": "git",
